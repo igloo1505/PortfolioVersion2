@@ -40,7 +40,8 @@ header nav {
   float: right; }
 
 header nav ul {
-  display: flex; }
+  display: flex;
+  transform: translateY(50%); }
 
 header nav ul a {
   display: block;

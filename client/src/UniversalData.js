@@ -1,7 +1,7 @@
 export const heroText = () => {
     console.log("this renders?");
     return (
-        <h1>Web Experiences: <br/> Designed Beautifully, <br/> Function Flawlessly</h1>
+        <h1 className="staggeredEntrance">Web Experiences: <br/> Designed Beautifully, <br/> Function Flawlessly</h1>
         )
 }
 export const HeroImagePallet = {
@@ -23,7 +23,7 @@ export const AppColors = {
 
 export const promptText = () => {
     return (
-        <p>Learn More Below</p>
+        <p className="staggeredEntrance">Learn More Below</p>
     )
 }
 export const featuredTitleText = () => {
@@ -63,6 +63,7 @@ export const skillsArray = [
 export const portfolioArray = [
     {   
         index: 0, 
+        transitionIndex: 4, 
         orientation: "left",
         imageName: "portfolioImageOne",
         appName: "Mock Trivia",

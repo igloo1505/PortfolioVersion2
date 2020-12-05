@@ -9,7 +9,7 @@ const SkillCard = ({skill}) => {
 
     return (
         <div>
-        <li key={skill.title} className="transition2">
+        <li key={skill.title} className="transition3">
         <div className={`icon-container ${skill.classIndex}`}>
         {skill.type === "MobileDevelopment" && swiftSvg()}
         {skill.type === "FrontendDesign" && <TechIcons/>}
