@@ -1,8 +1,23 @@
+@font-face {
+  font-family: LogoFont;
+  src: url(./UltraCondensedSansSerif.ttf); }
+
 body {
   height: 100vh;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden; }
+
+button:focus, button:active {
+  outline: none !important;
+  box-shadow: none; }
+
+.logoFont {
+  font-family: LogoFont;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: .3rem;
+  font-style: normal; }
 
 .App {
   width: 100vw; }
@@ -41,11 +56,31 @@ header nav {
 
 header nav ul {
   display: flex;
-  transform: translateY(50%); }
+  height: 100%; }
 
-header nav ul a {
+header nav ul .inlineNavLinks {
+  display: none; }
+
+header nav ul li a {
   display: block;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  line-height: 100%;
+  height: 100%;
+  transform: translateY(calc((100% - 1rem) / 2)); }
+
+header nav #dropDownMenu ul {
+  width: 50vw;
+  margin-right: 50%; }
+
+header nav #dropDownMenu ul li {
+  margin: 20px 50% 20px auto; }
+
+header nav .burgerButton {
+  float: right; }
+
+header nav .burgerButtonLi {
+  margin-right: 5px;
+  margin-left: auto; }
 
 .socialHeader, .hero-design {
   display: none; }
@@ -184,11 +219,25 @@ section {
   margin-bottom: 2rem; }
 
 @media only screen and (min-width: 800px) {
+  .logoFont {
+    font-family: LogoFont;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    font-style: normal; }
+  .logoFont .innerLogoText {
+    border-bottom: 1px solid white; }
   .featured, .portfolio {
     text-align: left; }
   .featured, .portfolio-container {
     display: grid;
     grid-template-columns: 40% auto; }
+  header nav ul {
+    display: flex; }
+  header nav ul .inlineNavLinks {
+    display: block; }
+  .burgerButton {
+    display: none; }
   .featured::before {
     opacity: 0.3; }
   .left, .portfolio-left {
@@ -217,6 +266,8 @@ section {
     background-color: unset; }
   .nav-container header {
     background: #0080F0; }
+  .nav-container header .logoFont {
+    letter-spacing: unset; }
   header {
     padding: 2rem 2rem 2rem 4rem; }
   .linkedInIcon {
@@ -267,6 +318,15 @@ section {
     max-width: 500px; } }
 
 @media only screen and (min-width: 1250px) {
+  .logoFont {
+    font-family: LogoFont;
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    letter-spacing: unset;
+    margin-left: -50px; }
+  .logoFont .innerLogoText {
+    border-bottom: 1px solid white; }
   header {
     padding-left: 10rem; }
   .socialHeader {
