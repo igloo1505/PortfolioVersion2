@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../assets/white_logo_transparent_background.png'
 import {
@@ -11,13 +11,17 @@ import {
     faNpm,
     faGithub
   } from "@fortawesome/free-brands-svg-icons";
-  import {faPen} from '@fortawesome/free-solid-svg-icons'
+import {faPen} from '@fortawesome/free-solid-svg-icons'
+import {AppColors} from '../UniversalData'
+import {gitHubSvg, linkedInSvg, mediumSvg} from '../assets/svg'
 
+//   TODO Change second link to blog link in socialHeader list
+//   TODO Add hamburger menu for mobile
 const Navbar = () => {
     return (
         <div className="nav-container">
         <header>
-        <img className="logo" src={logo} alt="Igloo Development" style={{backgroundColor: "#000"}}/>
+        <img className="logo" src={logo} alt="Igloo Development" />
         <nav>
         <ul>
         <li><a href="#!">My Work</a></li>
@@ -28,11 +32,12 @@ const Navbar = () => {
         </header>
         <div className="socialHeader">
         <ul>
-        <li><a href="https://github.com/igloo1505"><FontAwesomeIcon className="socialIcon githubIcon" icon={faGithub} /></a></li>
-        <li><a href="https://github.com/igloo1505"><FontAwesomeIcon className="socialIcon blogIcon" icon={faPen} /></a></li>
+        <li><a href="https://github.com/igloo1505">{gitHubSvg("#000")}</a></li>
+        <li><a href="https://github.com/igloo1505">{linkedInSvg("#000", "auto", "auto")}</a></li>
+        <li><a href="https://github.com/igloo1505">{mediumSvg("#000", "auto", "auto")}</a></li>
+        
         </ul>
         </div>
-            <h3>Yup.. This mothafucka too!</h3>
         </div>
     )
 }

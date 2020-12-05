@@ -1,15 +1,20 @@
 import React from 'react'
-import {heroText} from '../UniversalData'
+import {heroText, promptText} from '../UniversalData'
+import HeroSideImage from './HeroSideImage'
+import {AppColors} from '../UniversalData'
 
 const HeroSection = () => {
     return (
         <div className="hero">
-        <section className="content">
+        <div className="content">
+        <span className="heroText">
         {heroText()}
-        <div className="prompt">
-        <p>Learn More Below</p>
+        </span>
+        <div className="prompt" style={{color: AppColors.promptColor}}>
+        {promptText()}
         </div>
-        </section>
+        </div>
+        <HeroSideImage/>
         </div>
     )
 }
