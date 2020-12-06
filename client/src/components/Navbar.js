@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../assets/white_logo_transparent_background.png'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
 import Burger from '@animated-burgers/burger-squeeze' 
+import {gsap} from "gsap"
 import {
     faHtml5,
     faCss3Alt,
@@ -22,7 +23,25 @@ import {gitHubSvg, linkedInSvg, mediumSvg} from '../assets/svg'
 const Navbar = () => {
     const [burgerIsOpen, setBurgerIsOpen] = useState(false)
     const handleBurgerClick = () => {
+        if(!burgerIsOpen){
+            gsap.to(".slideOutDiv", {
+                duration: 0.5,
+                x: -230
+            })
+            let el = document.getElementsByClassName("burger-lines");
+            el[0].classList.add("burgerWasClicked")
+            console.log(el[0])
+        }
+        if(burgerIsOpen){
+            gsap.to(".slideOutDiv", {
+                duration: 1,
+                x: 230
+            })
+            let el = document.getElementsByClassName("burger-lines");
+            el[0].classList.remove("burgerWasClicked")
+        }
         setBurgerIsOpen(!burgerIsOpen)
+        console.log(burgerIsOpen)
     }
     return (
         <div className="nav-container">
@@ -34,24 +53,9 @@ const Navbar = () => {
         <li className="inlineNavLinks"><a href="#!">My Skills</a></li>
         <li className="inlineNavLinks"><a href="#!">Contact Me</a></li>
         <li className="burgerButtonLi">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dropDownMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <Burger className="burgerButton" isOpen={ burgerIsOpen } onClick={handleBurgerClick}/>
-        </button>
         </li>
         </ul>
-        <div className="collapse navbar-collapse" id="dropDownMenu">
-        <ul className="navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-        </ul>
-        </div>
         </nav>
         </header>
         <div className="socialHeader">
@@ -60,6 +64,19 @@ const Navbar = () => {
         <li><a href="https://github.com/igloo1505">{linkedInSvg("#000", "auto", "auto")}</a></li>
         <li><a href="https://github.com/igloo1505">{mediumSvg("#000", "auto", "auto")}</a></li>
         
+        </ul>
+        </div>
+        <div className="slideOutDiv">
+        <ul className="slideOutMenu">
+        <li className="slideOutMenuItem">
+        <a href="#!">My Skills</a>
+        </li>
+        <li className="slideOutMenuItem">
+        <a href="#!">My Work</a>
+        </li>
+        <li className="slideOutMenuItem">
+        <a href="#!">Contact Me</a>
+        </li>
         </ul>
         </div>
         </div>
