@@ -15,7 +15,7 @@ import {
     faGithub
   } from "@fortawesome/free-brands-svg-icons";
 import {faPen} from '@fortawesome/free-solid-svg-icons'
-import {AppColors} from '../UniversalData'
+import {AppColors, socialLinks} from '../UniversalData'
 import {gitHubSvg, linkedInSvg, mediumSvg} from '../assets/svg'
 
 //   TODO Change second link to blog link in socialHeader list
@@ -41,16 +41,35 @@ const Navbar = () => {
             el[0].classList.remove("burgerWasClicked")
         }
         setBurgerIsOpen(!burgerIsOpen)
-        console.log(burgerIsOpen)
     }
+
+    const handleSkillsClick = () => {
+        gsap.to(window, {
+            duration: 2,
+            scrollTo: {
+                y: "#skillsSection",
+                offsetY: 50
+            }
+        })
+    }
+    const handleWorkClick = () => {
+        gsap.to(window, {
+            duration: 2,
+            scrollTo: {
+                y: ".featured",
+                offsetY: 50
+            }
+        })
+    }
+
     return (
         <div className="nav-container">
         <header>
         <i class="logoFont">Igl<span className="innerLogoText">ooDevelo</span>pment</i>
         <nav>
         <ul className="inlineNavUl">
-        <li className="inlineNavLinks"><a href="#!">My Work</a></li>
-        <li className="inlineNavLinks"><a href="#!">My Skills</a></li>
+        <li className="inlineNavLinks" onClick={handleWorkClick}><a href="#!">My Work</a></li>
+        <li className="inlineNavLinks" onClick={handleSkillsClick}><a href="#!">My Skills</a></li>
         <li className="inlineNavLinks"><a href="#!">Contact Me</a></li>
         <li className="burgerButtonLi">
         <Burger className="burgerButton" isOpen={ burgerIsOpen } onClick={handleBurgerClick}/>
@@ -60,9 +79,9 @@ const Navbar = () => {
         </header>
         <div className="socialHeader">
         <ul>
-        <li><a href="https://github.com/igloo1505">{gitHubSvg("#000")}</a></li>
-        <li><a href="https://github.com/igloo1505">{linkedInSvg("#000", "auto", "auto")}</a></li>
-        <li><a href="https://github.com/igloo1505">{mediumSvg("#000", "auto", "auto")}</a></li>
+        <li style={{display: socialLinks.github.display}}><a href={socialLinks.github.link}>{gitHubSvg("#000")}</a></li>
+        <li style={{display: socialLinks.linkedIn.display}}><a href={socialLinks.linkedIn.link}>{linkedInSvg("#000", "auto", "auto")}</a></li>
+        <li style={{display: socialLinks.blog.display}}><a href={socialLinks.blog.link}>{mediumSvg("#000", "auto", "auto")}</a></li>
         
         </ul>
         </div>

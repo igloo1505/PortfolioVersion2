@@ -71,3 +71,20 @@ export const portfolioArray = [
         description: "Trivia game for entry level developers, built with and based on Javascript, DBMS's and general development knowledge"
     }
 ]
+
+
+export const socialLinks = {
+    github: {
+        link: "https://github.com/igloo1505",
+        display: "list-item"
+    },
+    linkedIn: {
+        link: "https://www.linkedin.com/in/andrew-mueller-689626198/",
+        display: "list-item"
+    },
+    blog: {
+        link: "https://one-hundred-days-blog.herokuapp.com/",
+        display: "none",
+        // display: "list-item"
+    }
+}

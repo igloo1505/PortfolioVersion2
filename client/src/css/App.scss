@@ -2,7 +2,14 @@
   font-family: LogoFont;
   src: url(./UltraCondensedSansSerif.ttf);
 }
-
+@font-face{
+    font-family: FontRounded;
+    src: url(./OdinRoundedBold.otf)
+}
+@font-face{
+    font-family: AccidentalPresident;
+    src: url(./AccidentalPresident.ttf)
+}
 body{
     height: 100vh;
     margin: 0;
@@ -14,7 +21,9 @@ button:focus, button:active {
    box-shadow: none;
 }
 .logoFont{
-    font-family: LogoFont;
+    // font-family: LogoFont;
+    font-family: FontRounded;
+    // font-family: AccidentalPresident;
     color: #fff;
     font-size: 20px;
     letter-spacing: .3rem;
@@ -282,7 +291,7 @@ section{
 
 @media only screen and (min-width: 800px){
     .logoFont{
-    font-family: LogoFont;
+    // font-family: LogoFont;
     display: block;
     color: #fff;
     font-size: 30px;
@@ -439,7 +448,7 @@ header nav {
 
 @media only screen and (min-width: 1250px){
     .logoFont{
-    font-family: LogoFont;
+    // font-family: LogoFont;
     color: #fff;
     font-size: 40px;
     font-style: normal;

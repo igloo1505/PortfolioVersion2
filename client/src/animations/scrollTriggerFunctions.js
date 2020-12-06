@@ -4,6 +4,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const animateOnScroll = () => {   
     gsap.registerPlugin(ScrollTrigger);
+    const reAnimateEntrance = () => {
+        console.log("running reanimate")
+        // tl.reverse()
+        // tl.to('.hero-design', {
+        //     opacity: 1,
+        //     y: 50,
+        //     ease: "Power4.easeOut",
+        //     duration: 1
+        // }, "-=2")
+        // gsap.to(".square-anim", {
+        //     stagger: .2,
+        //     x: "500",
+        //     opacity: 1,
+        //     scale: 1,
+        //     duration: 2.5,
+        //     // ease: "back.out(1.7)"
+        //     ease: "elastic.out(1, 0.3)"
+        // })
+    }
    
     let tl = gsap.timeline()
     tl.from('.content', {
@@ -78,7 +97,7 @@ export const animateOnScroll = () => {
         stagger: 0.3
         }
     )
-
+    
 
 
     gsap.from(".portfolio-left-5", {
@@ -126,5 +145,44 @@ export const animateOnScroll = () => {
         duration: 1.2,
         stagger: 0.3
         }
-    )
-}
+    )    
+
+    // const sceneTwo = () => {
+    //     let tl = gsap.timeline()
+    //     // gsap.to(".circleFadeOut", {
+    //     //     scrollTrigger:{
+    //     //         // trigger: ".leftSquare",
+    //     //         // start: "top 10%",
+    //     //         start: 60
+    //     //     },
+    //     //     // x: 500,
+    //     //     scaleX: 0.1,
+    //     //     scaleY: 0.1,
+    //     //     opacity: 0,
+    //     //     duration: 0.2,
+    //     //     stagger: 0.2
+    //     // })
+    //     console.log(tl)
+    //     return tl
+    // }
+    // tl.add(sceneTwo())
+  
+    ScrollTrigger.create({
+        start: 0,
+        onUpdate: (self) => {
+            
+            let y = document.scrollingElement.scrollTop
+            let Y = window.pageYOffset;
+            let emHeight = 434
+            let scaleOnScroll = ((emHeight - Y) / emHeight)
+           
+            gsap.to(".square-anim", {
+                rotation: self.progress * 850
+            })
+            gsap.to(".circleFadeOut", {
+                scaleX: scaleOnScroll,
+                scaleY: scaleOnScroll
+            })
+        }
+    })
+    }
