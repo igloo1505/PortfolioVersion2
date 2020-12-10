@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPen} from '@fortawesome/free-solid-svg-icons'
 import TechIcons from '../assets/TechIcons'
-import {codeSymbolSvg, swiftSvg} from '../assets/svg'
+import {codeSymbolSvg, swiftSvg, oAuthSvg, jwtSvg} from '../assets/svg'
 import googleAnalyticsSvg from '../assets/googleAnalyticsSvg.svg'
 
 const SkillCard = ({skill}) => {
@@ -14,9 +14,11 @@ const SkillCard = ({skill}) => {
         {skill.type === "MobileDevelopment" && swiftSvg()}
         {skill.type === "FrontendDesign" && <TechIcons/>}
         {skill.type === "BusinessTechnologies" && <img className="googleAnaltyicsIcon" src={googleAnalyticsSvg} alt="Google Analytics"/>}
+        {skill.type === "secureBackend" && jwtSvg("auto", 80)}
         </div>
         <p className="skill-title">{skill.title}</p>
-        <p className="featured-desc skill-desc">{skill.desc}</p>
+ <p className="featured-desc skill-desc">{skill.desc}</p>
+        
             </li>
         </div>
     )

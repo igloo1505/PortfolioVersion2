@@ -4,25 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const animateOnScroll = () => {   
     gsap.registerPlugin(ScrollTrigger);
-    const reAnimateEntrance = () => {
-        console.log("running reanimate")
-        // tl.reverse()
-        // tl.to('.hero-design', {
-        //     opacity: 1,
-        //     y: 50,
-        //     ease: "Power4.easeOut",
-        //     duration: 1
-        // }, "-=2")
-        // gsap.to(".square-anim", {
-        //     stagger: .2,
-        //     x: "500",
-        //     opacity: 1,
-        //     scale: 1,
-        //     duration: 2.5,
-        //     // ease: "back.out(1.7)"
-        //     ease: "elastic.out(1, 0.3)"
-        // })
-    }
+ 
    
     let tl = gsap.timeline()
     tl.from('.content', {
@@ -147,25 +129,6 @@ export const animateOnScroll = () => {
         }
     )    
 
-    // const sceneTwo = () => {
-    //     let tl = gsap.timeline()
-    //     // gsap.to(".circleFadeOut", {
-    //     //     scrollTrigger:{
-    //     //         // trigger: ".leftSquare",
-    //     //         // start: "top 10%",
-    //     //         start: 60
-    //     //     },
-    //     //     // x: 500,
-    //     //     scaleX: 0.1,
-    //     //     scaleY: 0.1,
-    //     //     opacity: 0,
-    //     //     duration: 0.2,
-    //     //     stagger: 0.2
-    //     // })
-    //     console.log(tl)
-    //     return tl
-    // }
-    // tl.add(sceneTwo())
   
     ScrollTrigger.create({
         start: 0,

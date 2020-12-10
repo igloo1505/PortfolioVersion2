@@ -1,5 +1,4 @@
 export const heroText = () => {
-    console.log("this renders?");
     return (
         <h1 className="staggeredEntrance">Web Experiences: <br/> Designed Beautifully, <br/> Function Flawlessly</h1>
         )
@@ -42,21 +41,29 @@ export const skillsArray = [
         classIndex: "one",
         title: "Modern Frontend Design", 
         type: "FrontendDesign",
-        desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, perferendis odio esse rem quis aliquid modi provident! Pariatur, ad debitis!"
+        desc: "I strive to build unique online experiences directly from code, using the most modern technology and UI trends. Technologies like Facebook's React framework, Progressive Web Apps to allow functioning offline, and various charting libraries allow the modern web to not only be descriptive, detailed and informative, but perform efficiently."
+    
     },
     {
         index: 1,
         classIndex: "two",
         title: "iOS Development", 
         type: "MobileDevelopment",
-        desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, perferendis odio esse rem quis aliquid modi provident! Pariatur, ad debitis!"
+        desc: "When a browser based website just isn't enough, a native mobile application can help to keep customers connected, employees in touch while on the move, and all of your data just one touch away. I have the most experience building for iOS, but can develop for Android as well using cross-platform technologies like React Native."
     },
     {
         index: 2,
         classIndex: "three",
         title: "Business Integration", 
         type: "BusinessTechnologies",
-        desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, perferendis odio esse rem quis aliquid modi provident! Pariatur, ad debitis!"
+        desc: "By integrating with powerful analytics tools, clients are able to track dozens of valuable data points in real time. This can provide insight into which marketing strategies are providing the highest ROE, the on-site behavior of each visitor, and be integrated with both Google's own dashboard, as well as a custom built Admin dashboard that only you will have access."
+    },
+    {
+        index: 3,
+        classIndex: "four",
+        title: "Secure data management", 
+        type: "secureBackend",
+        desc: "Whether integrating with third party authentication through Google, Apple, and Facebook or creating a completely independent authentication process, you can be sure that only you have access to sensitive information while customers and employees can easily find and access the data they need to keep your business running smoothly."
     },
 ]
 
