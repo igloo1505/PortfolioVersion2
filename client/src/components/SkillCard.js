@@ -8,7 +8,7 @@ import googleAnalyticsSvg from '../assets/googleAnalyticsSvg.svg'
 const SkillCard = ({skill}) => {
 
     return (
-        <div>
+        <div className="cardOuter">
         <li key={skill.title} className="transition3">
         <div className={`icon-container ${skill.classIndex}`}>
         {skill.type === "MobileDevelopment" && swiftSvg()}
