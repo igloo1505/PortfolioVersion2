@@ -266,9 +266,16 @@ section {
 .portfolio {
   background: #F7F7F7; }
 
+  /* .portfolio-container a {
+    display: contents;
+  } */
+
 .portfolio-container a img {
   border-radius: 1rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem; 
+  max-height: 300px;
+  width: auto;
+}
 
 @media only screen and (min-width: 800px) {
   .logoFont {
@@ -286,7 +293,12 @@ section {
     text-align: left; }
   .featured, .portfolio-container {
     display: grid;
-    grid-template-columns: 40% auto; }
+    grid-template-columns: 40% auto;
+    justify-content: space-between;
+  }
+    .portfolio-container a {
+      display: contents;
+    }
   header nav ul {
     display: flex; }
   header nav ul .inlineNavLinks {
