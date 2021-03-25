@@ -24,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/igloo1505/PortfolioVersion2/issues"
   },
-  "homepage": "https://github.com/igloo1505/PortfolioVersion2#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "config": "^3.3.3",
