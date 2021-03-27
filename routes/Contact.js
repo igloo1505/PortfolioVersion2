@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
     res.json(addContact);
   } catch (error) {
     console.error(error.message);
-    res.status(500).send("Oh $**%. Post failed.");
+    res.status(500).send(`Oh $**%. Post failed. ${error.message}`);
   }
 });
 
