@@ -1,14 +1,12 @@
 const mongoose = require("mongoose");
-const config = require("config");
-const db = config.get("mongoURI");
 
 const connectDB = () => {
   mongoose
-    .connect(db, {
+    .connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
     })
     .then(() => console.log("MongoDB Connected"));
 };
