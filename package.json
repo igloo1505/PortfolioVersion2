@@ -25,8 +25,9 @@
     "url": "https://github.com/igloo1505/PortfolioVersion2/issues"
   },
   "dependencies": {
+    "@vonage/server-sdk": "^2.10.7",
     "colors": "^1.4.0",
-    "config": "^3.3.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "history": "^5.0.0",
     "mongodb": "^3.6.3",
