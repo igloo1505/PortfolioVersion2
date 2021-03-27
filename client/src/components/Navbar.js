@@ -87,7 +87,7 @@ const Navbar = ({ setModalIsOpen, open }) => {
   return (
     <div className="nav-container">
       <header>
-        <i class="logoFont">
+        <i className="logoFont">
           Igl<span className="innerLogoText">ooDevelo</span>pment
         </i>
         <nav>

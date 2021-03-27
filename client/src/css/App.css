@@ -26,7 +26,12 @@ button:focus, button:active {
   font-size: 20px;
   letter-spacing: .3rem;
   font-style: normal; }
-
+  .st0 {
+    fill: #F9AB00;
+  }
+  .st1 {
+    fill: #E37400;
+  }
 .App {
   width: 100vw; 
   overflow: hidden;
