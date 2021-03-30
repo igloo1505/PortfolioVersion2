@@ -389,7 +389,10 @@ section {
   .featured::before {
     opacity: 0.3; }
   .left, .portfolio-left {
-    display: grid; }
+    display: grid;
+    margin-top: -20px;
+    padding-bottom: 20px;
+  }
   .right {
     margin-left: 2rem;
     margin-top: 1rem; }
