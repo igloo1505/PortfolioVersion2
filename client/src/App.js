@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import M from "materialize-css/dist/js/materialize.min.js";
 import ReactGA from "react-ga";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./css/MaterializeModal.css";
 import "./css/App.css";
+import "./css/Gallery.css";
 import ttiPolyfill from "tti-polyfill";
-import HeroSection from "./components/HeroSection";
-import FeaturedSection from "./components/FeaturedSection";
-import SkillsSection from "./components/SkillsSection";
-import PortfolioSection from "./components/PortfolioSection";
-import ContactModal from "./components/ContactModal";
+import LandingPage from "./Pages/LandingPage";
+import ComponentGallery from "./Pages/ComponentGallery";
 import { gsap } from "gsap";
 import { EaselPlugin } from "gsap/EaselPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -18,7 +17,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { animateOnScroll } from "./animations/scrollTriggerFunctions";
 
 function App() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   function handlePerformance(list) {
     list.getEntries().forEach((entry) => {
       ReactGA.timing({
@@ -70,6 +68,7 @@ function App() {
       value: tti,
     });
   });
+
   useEffect(() => {
     gsap.registerPlugin(
       EaselPlugin,
@@ -87,14 +86,18 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <Navbar setModalIsOpen={setModalIsOpen} open={modalIsOpen} />
-      <HeroSection />
-      <FeaturedSection />
-      <SkillsSection />
-      <PortfolioSection />
-      <ContactModal open={modalIsOpen} setModalIsOpen={setModalIsOpen} />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/landing">
+            <LandingPage />
+          </Route>
+          <Route path="/">
+            <ComponentGallery />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

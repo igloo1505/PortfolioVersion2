@@ -1,0 +1,43 @@
+.gallerySection {
+  height: calc(100vh - 111px);
+  margin: 0;
+  padding: 0; }
+
+.gallerySection * {
+  margin: 0;
+  padding: 0; }
+
+.hiddenDiv {
+  visibility: hidden; }
+
+.horizontalCardStack {
+  display: flex;
+  flex-direction: row; }
+
+.cardImage {
+  height: 100%;
+  width: 100%; }
+
+.horizontalStackedCard {
+  background: transparent;
+  perspective: 1000px;
+  height: 500px;
+  width: 200px; }
+
+.horizontalStackedCard .innerCardDiv {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+
+.horizontalStackedCard .innerCardDiv .cardFront, .horizontalStackedCard .innerCardDiv .cardBack {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%; }
+
+.horizontalStackedCard .innerCardDiv .cardBack {
+  transform: rotateY(180deg); }
