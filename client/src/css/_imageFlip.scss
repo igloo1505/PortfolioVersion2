@@ -1,0 +1,82 @@
+.gallerySection {
+    height: calc(100vh - 111px);
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+.gallerySection * {
+    margin: 0;
+    padding: 0;
+    // overflow-x: hidden;
+    overflow: visible;
+}
+
+.hiddenDiv {
+    visibility: hidden;
+}
+
+.horizontalCardStack {
+    display: flex;
+    flex-direction: row;
+    // overflow-x: unset;
+}
+.cardImage{
+    // width: unset;
+    // height: 100%;
+    width: 100%;
+    min-width: 100%;
+    display: block;
+    // height: fit-content;
+    object-fit: contain;
+    // float: left;
+}
+
+.cardBackPhaseTwo {
+    
+    // z-index: -100;
+}
+
+.horizontalStackedCardPhaseTwo {
+    // visibility: hidden;
+    display: none;
+    // z-index: -10;
+}
+
+.horizontalStackedCard {
+    // background: transparent;
+    background-color: red;
+    perspective: 1000px;
+    // height: 500px;
+    height: fit-content;
+    // width: 200px;
+    width: 12.5vw;
+    .innerCardDiv{
+        background-color: red;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+        width: 100%;
+        // height: 100%;
+        height: fit-content;
+        text-align: center;
+    .cardFront, .cardBack{
+        position: absolute;
+        // background-color: orange;
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden;
+        width: 100%;
+        // height: 100%;
+        // height: fit-content;
+    }
+    .cardBack{
+        transform: rotateY(180deg);
+    }
+}
+}
+
+// .horizontalStackedCard:hover .innerCardDiv {
+//         transform: rotateY(180deg);
+// }
+
+
