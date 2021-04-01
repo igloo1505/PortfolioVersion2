@@ -38,6 +38,48 @@ const PanaromicImageCard = ({
       }, 1000);
     }
   };
+
+  
+
+  
+
+  const jiggleAnimation = () => {
+    let cardStack = document.getElementsByClassName("horizontalCardStack");
+    cardStack = cardStack[0];
+    const style = getComputedStyle(cardStack);
+    let emHeight = style.height.slice(0, style.height.length - 2);
+    emHeight = parseInt(emHeight);
+    let verticalOffset = cardStack.getBoundingClientRect()
+    verticalOffset = verticalOffset.y
+    const vh = Math.max(document.documentElement.clientHeight);
+    // const dropToCenter = (vh - verticalOffset) / 2 - emHeight / 2;
+    // const dropToCenter = (vh / 2 - ((verticalOffset + emHeight) / 2))
+    const dropToCenter = ((vh - verticalOffset * 2 - emHeight) / 2)
+    console.log("Calculation adjust here...", ((vh - verticalOffset * 2 - emHeight) / 2))
+
+    if(index === 8){ 
+    console.log("vh", vh);
+    console.log("verticalOffset", verticalOffset);
+    console.log("emHeight", emHeight);
+    console.log("dropToCenter", dropToCenter);
+    }
+
+    // gsap.to(`.horizontalCardStack`, {
+    //   duration: 0.5,
+    //   // display: "block",
+    //   // transform: "translateY(50px)",
+    //   transform: "translateY(50px)",
+    //   ease: "bounce.out",
+    // });
+    gsap.to(`.horizontalStackedCard${index}`, {
+      duration: 0.5,
+      // display: "block",
+      // transform: "translateY(50px)",
+      transform: `translateY(${dropToCenter}px)`,
+      ease: "bounce.out",
+    });
+  };
+
   let delay;
   if (index === 1) {
     delay = initialAnimationDelay;
@@ -47,6 +89,11 @@ const PanaromicImageCard = ({
   if (animationPhase === 1) {
     setTimeout(() => {
       flipCardHorizontally();
+    }, delay);
+  }
+  if (animationPhase === 2) {
+    setTimeout(() => {
+      jiggleAnimation();
     }, delay);
   }
   const styles = {
@@ -88,7 +135,9 @@ const animationPhaseOneContent = (
           </div>
         </div>
       </div>
-      <div className="horizontalStackedCard horizontalStackedCardPhaseTwo">
+      <div
+        className={`horizontalStackedCard horizontalStackedCardPhaseTwo horizontalStackedCard${index}`}
+      >
         <div
           className={`innerCardDiv innerCardDiv${index}`}
           style={animationPhase === 2 ? styles.phaseTwo : {}}
@@ -103,7 +152,9 @@ const animationPhaseOneContent = (
 };
 const animationPhaseTwoContent = (backImage, animationPhase, styles, index) => {
   return (
-    <div className="horizontalStackedCard horizontalStackedCardPhaseTwo">
+    <div
+      className={`horizontalStackedCard horizontalStackedCardPhaseTwo horizontalStackedCard${index}`}
+    >
       <div
         className={`innerCardDiv innerCardDiv${index}`}
         style={animationPhase === 2 ? styles.phaseTwo : {}}

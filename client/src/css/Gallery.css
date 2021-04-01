@@ -1,7 +1,7 @@
 .gallerySection {
   height: calc(100vh - 111px);
   margin: 0;
-  padding: 0;
+  padding: 0 50px;
   background-color: #fff;
   z-index: 1; }
 
@@ -27,7 +27,7 @@
   display: none; }
 
 .horizontalStackedCard {
-  background-color: red;
+  background: transparent;
   perspective: 1000px;
   height: fit-content;
   width: 12.5vw; }

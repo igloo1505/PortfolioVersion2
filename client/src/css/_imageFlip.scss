@@ -1,7 +1,7 @@
 .gallerySection {
     height: calc(100vh - 111px);
     margin: 0;
-    padding: 0;
+    padding: 0 50px;
     background-color: #fff;
     z-index: 1;
 }
@@ -32,10 +32,10 @@
     // float: left;
 }
 
-.cardBackPhaseTwo {
+// .cardBackPhaseTwo {
     
-    // z-index: -100;
-}
+//     // z-index: -100;
+// }
 
 .horizontalStackedCardPhaseTwo {
     // visibility: hidden;
@@ -44,8 +44,7 @@
 }
 
 .horizontalStackedCard {
-    // background: transparent;
-    background-color: red;
+    background: transparent;
     perspective: 1000px;
     // height: 500px;
     height: fit-content;
