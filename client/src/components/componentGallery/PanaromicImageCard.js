@@ -44,49 +44,51 @@ const PanaromicImageCard = ({
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal8", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+        transform: 'translate3d(0, -5000px, -5000px)',
+        // transform: 'rotateY(180deg)',
+        // transform: 'translateZ(-5000px)',
       })
       }, initialDelay)
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal7", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + internalDelay)
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal6", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + (internalDelay * 2))
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal5", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + (internalDelay * 3))
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal4", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + (internalDelay * 4))
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal3", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + (internalDelay * 5))
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal2", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + (internalDelay * 6))
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal1", {
         duration: 0.5,
-        transform: 'translateY(-5000px)'
+transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + (internalDelay * 7))
   }
@@ -130,6 +132,7 @@ const flipToLogo = () => {
         gsap.to(".horizontalStackedCardPhaseFour", {
           duration: 0,
           transform: `translateY(${dropToCenter}px)`,
+          // zIndex: -2,
           display: "inline-block",
         });
 

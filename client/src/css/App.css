@@ -139,7 +139,8 @@ img {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem; }
+  padding: 2rem;
+  z-index: 50; }
 
 header .logo {
   color: #fff;
