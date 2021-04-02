@@ -95,12 +95,13 @@ const PanaromicImageSection = () => {
   ];
   return (
     <div className="gallerySection">
-      <h1>ImageSection</h1>
       <div className="horizontalCardStack">
         {cardArray.map((im, index) => (
           <PanaromicImageCard
             key={index}
             frontImage={im.frontImage}
+            thirdImage={im.thirdImage}
+            fourthImage={im.fourthImage}
             backImage={im.backImage}
             index={im.index}
             animationPhase={animationPhase}
