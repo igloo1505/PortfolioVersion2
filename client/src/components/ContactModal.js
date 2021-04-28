@@ -38,7 +38,7 @@ const ContactModal = (props) => {
               value={contact.name}
               onChange={(e) => handleInput("name", e.target.value)}
             />
-            <label for="Name">Name</label>
+            <label htmlFor="Name">Name</label>
           </div>
           <div className="input-field col s6">
             <input
@@ -49,7 +49,7 @@ const ContactModal = (props) => {
               value={contact.email}
               onChange={(e) => handleInput("email", e.target.value)}
             />
-            <label for="Email">Email</label>
+            <label htmlFor="Email">Email</label>
           </div>
         </div>
         <div className="row">
@@ -60,7 +60,7 @@ const ContactModal = (props) => {
               value={contact.message}
               onChange={(e) => handleInput("message", e.target.value)}
             ></textarea>
-            <label for="message">How can I help?</label>
+            <label htmlFor="message">How can I help?</label>
           </div>
         </div>
       </div>

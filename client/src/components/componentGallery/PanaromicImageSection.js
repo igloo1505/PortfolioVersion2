@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { gsap } from "gsap";
 import PanaromicImageCard from "./PanaromicImageCard";
 import frontImageOne from "../../assets/slicedImages/frontOfCard/image_part_001.jpg";
 import frontImageTwo from "../../assets/slicedImages/frontOfCard/image_part_002.jpg";
@@ -32,9 +33,24 @@ import fourthImageFive from "../../assets/slicedImages/fourthCardFace/image_part
 import fourthImageSix from "../../assets/slicedImages/fourthCardFace/image_part_006.jpg";
 import fourthImageSeven from "../../assets/slicedImages/fourthCardFace/image_part_007.jpg";
 import fourthImageEight from "../../assets/slicedImages/fourthCardFace/image_part_008.jpg";
+import { moveToSectionBelow, getNavbarHeight } from "../../utilityFunctions";
 
-const PanaromicImageSection = () => {
+const PanaromicImageSection = ({
+  setGallerySectionToDisplay,
+  isInitialView,
+  setIsInitialView,
+  gallerySectionToDisplay,
+}) => {
   const [animationPhase, setAnimationPhase] = useState(1);
+  const [style, setStyle] = useState({});
+  useEffect(() => {
+    let styles = getNavbarHeight();
+    setStyle(styles);
+    // console.log(styles)
+    if (isInitialView === false) {
+      moveToSectionBelow();
+    }
+  }, []);
   const cardArray = [
     new ImageCard(
       frontImageOne,
@@ -93,8 +109,9 @@ const PanaromicImageSection = () => {
       8
     ),
   ];
+
   return (
-    <div className="gallerySection">
+    <div className="gallerySection panoramicImageSection" style={style}>
       <div className="horizontalCardStack">
         {cardArray.map((im, index) => (
           <PanaromicImageCard
@@ -106,6 +123,7 @@ const PanaromicImageSection = () => {
             index={im.index}
             animationPhase={animationPhase}
             setAnimationPhase={setAnimationPhase}
+            setGallerySectionToDisplay={setGallerySectionToDisplay}
           />
         ))}
       </div>

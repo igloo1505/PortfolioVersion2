@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {shouldHideBodyOverflow} from "../utilityFunctions"
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import FeaturedSection from "../components/FeaturedSection";
@@ -8,6 +9,9 @@ import ContactModal from "../components/ContactModal";
 
 const LandingPage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  useEffect(() => {
+  shouldHideBodyOverflow(false)    
+  }, [])
   return (
     <div className="App">
       <Navbar

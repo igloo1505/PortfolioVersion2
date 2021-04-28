@@ -1,18 +1,5 @@
 import React, { Fragment } from "react";
 import Burger from "@animated-burgers/burger-squeeze";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import logo from "../assets/white_logo_transparent_background.png";
-// import {
-//   faHtml5,
-//   faCss3Alt,
-//   faReact,
-//   faJs,
-//   faNodeJs,
-//   faGit,
-//   faNpm,
-//   faGithub,
-// } from "@fortawesome/free-brands-svg-icons";
-// import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { socialLinks } from "../UniversalData";
 import { gitHubSvg, linkedInSvg, mediumSvg } from "../assets/svg";
 
@@ -26,7 +13,8 @@ const NavbarNavigationSection = ({
   if (currentPath === "landing") {
     return (
       <Fragment>
-        <header>
+        <header id="navbarHeader">
+        <div className="headerOverlayLanding"> 
           <i className="logoFont">
             Igl<span className="innerLogoText">ooDevelo</span>pment
           </i>
@@ -52,6 +40,7 @@ const NavbarNavigationSection = ({
               </li>
             </ul>
           </nav>
+          </div>
         </header>
         <div className="socialHeader">
           <ul>
@@ -113,9 +102,10 @@ const NavbarNavigationSection = ({
     return (
       <Fragment>
         <header>
-          <i className="logoFont">
+        <div className="headerOverlayGallery">
+          <div className="logoFont">
             Igl<span className="innerLogoText">ooDevelo</span>pment
-          </i>
+          </div>
           <nav>
             <ul className="inlineNavUl">
               <li className="inlineNavLinks">
@@ -135,6 +125,7 @@ const NavbarNavigationSection = ({
               </li>
             </ul>
           </nav>
+          </div>
         </header>
         <div className="socialHeader">
           <ul>
@@ -180,6 +171,7 @@ const NavbarNavigationSection = ({
             </li>
           </ul>
         </div>
+        
       </Fragment>
     );
   }

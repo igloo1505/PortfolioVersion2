@@ -9,6 +9,7 @@ const PanaromicImageCard = ({
   index,
   animationPhase,
   setAnimationPhase,
+  setGallerySectionToDisplay
 }) => {
   const initialAnimationDelay = 1000;
   const flipCardHorizontally = () => {
@@ -88,9 +89,16 @@ transform: 'translate3d(0, -5000px, -5000px)',
       setTimeout(()=> {
       gsap.to(".innerCardDivFinal1", {
         duration: 0.5,
-transform: 'translate3d(0, -5000px, -5000px)',
+        transform: 'translate3d(0, -5000px, -5000px)',
       })
       }, initialDelay + (internalDelay * 7))
+      setTimeout(()=> {
+        gsap.to(".innerCardDivA", {
+        duration: 0.0,
+        display: 'none',
+      })
+        setGallerySectionToDisplay(2)
+      }, initialDelay + (internalDelay * 8))
   }
 
 const flipToLogo = () => {
@@ -135,7 +143,6 @@ const flipToLogo = () => {
           // zIndex: -2,
           display: "inline-block",
         });
-
       }, 1500)
     }
   };
