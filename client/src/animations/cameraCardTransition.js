@@ -6,39 +6,9 @@ const reAlignLayoutToOpen = () => {
   const productCardLayout = pcLayout[0].getBoundingClientRect();
 
   let layoutTimeline = gsap.timeline();
-  //   layoutTimeline.to(".product", {
-  //     // display: "grid",
-  //     // gridTemplateColumns: "0.9fr 1fr",
-  //     // width: `${Math.floor(productCardLayout.width) * 2}px`,
-  //     scaleX: 2,
-  //     transformOrigin: "100% 50%",
-  //     // widthPercent: 200,
-  //     margin: "auto",
-  //     // padding: "2.5em 0",
-  //     // min-width: 600px;
-  //     // max-width: 900px;
-  //     backgroundColor: "#fff",
-  //     borderRadius: "5px",
-  //     // duration: 2,
-  //     ease: "Power4.easeOut",
-  //   });
-  //   layoutTimeline.to("product__info", {
-  //     // marginLeft: "100%",
-  //     padding: "0.8em 0",
-  //     position: "relative",
-  //     display: "block",
-  //     // transform: "translateX(0%)",
-  //     zIndex: -5,
-  //     duration: 1,
-  //     ease: "Power4.easeOut",
-  //   });
 
   let dims = getDimensionsFromClassName("photo-container");
   layoutTimeline.to(".photo-container", {
-    // position: "absolute",
-    // display: "grid",
-    // grid-template-rows: 1fr,
-    // gridTemplateRows: "1fr",
     width: "100%",
     transform: `translateX(-${dims.width / 2}px)`,
     height: "100%",
@@ -67,31 +37,6 @@ const reAlignLayoutToOpen = () => {
     duration: 1,
     ease: "Power4.easeOut",
   });
-
-  //   gsap.to(".photo-main img", {
-  //     scaleX: 1,
-  //   }),
-  //   gsap.to(".photo-container", {
-  //     position: "absolute",
-  //     width: "50%",
-  //     // gridTemplateRows: "1fr",
-  //     height: "100%",
-  //     // borderRadius: "6px",
-  //     // boxShadow: "4px 4px 25px -2px rgb(0 0 0)",
-  //     // delay: 0.2,
-  //   });
-  //   layoutTimeline.to(".product__info", {
-  //     // display: "grid",
-  //     // gridTemplateColumns: "0.9fr 1fr",
-  //     width: "50%",
-  //     textAlign: "center",
-  //     // margin: "auto 10px",
-  //     backgroundColor: "#fff",
-  //     scaleX: 1,
-  //     float: "right",
-  //     borderRadius: "5px",
-  //     duration: 0.2,
-  //   });
 };
 
 const reAlignLayoutToClosed = () => {
@@ -99,12 +44,7 @@ const reAlignLayoutToClosed = () => {
   let layOutTimeLine = gsap.timeline();
   let dims = getDimensionsFromClassName("photo-container");
   layOutTimeLine.to(".photo-container", {
-    // position: "absolute",
-    // display: "grid",
-    // grid-template-rows: 1fr,
-    // gridTemplateRows: "1fr",
     width: "100%",
-    // transform: `translateX(${dims.width / 2}px)`,
     transform: `translateX(0px)`,
     height: "100%",
     borderRadius: "6px",
@@ -115,10 +55,7 @@ const reAlignLayoutToClosed = () => {
   layOutTimeLine.to(
     ".imageWrapper",
     {
-      //   transform: "translate3d(0px, 0px, 0px) scale(1)",
-      // transform: "translate3d(100px, 20px, 0px) scale(0.83)",
       transform: `translateX(0px)`,
-      // border: "3px solid red",
     },
     "-=1"
   );
@@ -141,36 +78,4 @@ export const transitionToOpen = (wasOpen) => {
   } else if (wasOpen === true) {
     reAlignLayoutToClosed();
   }
-
-  //   gsap.to(".photo-container", {
-  //     position: "absolute",
-  //     width: "50%",
-  //     gridTemplateRows: "1fr",
-  //     height: "100%",
-  //     borderRadius: "6px",
-  //     boxShadow: "4px 4px 25px -2px rgb(0 0 0)",
-  //     delay: 0.2,
-  //   });
-  //   gsap.to(".product__photo", {
-  //     // display: "grid",
-  //     // gridTemplateColumns: "0.9fr 1fr",
-  //     width: "100%",
-  //     margin: "auto 10px",
-  //     // padding: "2.5em 1em",
-  //     // min-width: 600px;
-  //     // max-width: 900px;
-  //     backgroundColor: "#fff",
-  //     borderRadius: "5px",
-  //     duration: 0.2,
-  //   });
-  //   gsap.to(".photo-album", {
-  //     transform: "translateY(0px)",
-  //     zIndex: 1,
-  //     duration: 0.4,
-  //     delay: 0.4,
-  //   });
-
-  //   gsap.to(".description ul", {
-  //     listStyleType: "none",
-  //   });
 };
