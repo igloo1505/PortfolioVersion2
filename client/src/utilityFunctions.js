@@ -37,11 +37,21 @@ export const moveToSectionRight = () => {
 
 export const getNavbarHeight = () => {
   let com = document.getElementsByClassName("nav-container");
-  console.log("coms...", com);
   //   let rect = com.getBoundingClientRect();
   //   let rec = com.getClientRect();
   //   console.log(rec);
   return {
     background: "#0080F0",
   };
+};
+
+export const getDimensionsFromClassName = (className) => {
+  let em = document.getElementsByClassName(className);
+  if (!em[0]) {
+    return {};
+  } else {
+    em = em[0];
+    let dims = em.getBoundingClientRect();
+    return dims;
+  }
 };
