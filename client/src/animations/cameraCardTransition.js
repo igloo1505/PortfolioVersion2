@@ -49,7 +49,7 @@ const reAlignLayoutToOpen = () => {
   });
 
   layoutTimeline.to(
-    ".imageWrapper img",
+    ".imageWrapper",
     {
       transform: "translate3d(-100px, -20px, 0px) scale(1.2)",
     },
@@ -96,6 +96,43 @@ const reAlignLayoutToOpen = () => {
 
 const reAlignLayoutToClosed = () => {
   console.log("realign to closed layout here");
+  let layOutTimeLine = gsap.timeline();
+  let dims = getDimensionsFromClassName("photo-container");
+  layOutTimeLine.to(".photo-container", {
+    // position: "absolute",
+    // display: "grid",
+    // grid-template-rows: 1fr,
+    // gridTemplateRows: "1fr",
+    width: "100%",
+    // transform: `translateX(${dims.width / 2}px)`,
+    transform: `translateX(0px)`,
+    height: "100%",
+    borderRadius: "6px",
+    boxShadow: "4px 4px 25px -2px rgb(0 0 0 / 30%)",
+    duration: 1,
+    ease: "Power4.easeOut",
+  });
+  layOutTimeLine.to(
+    ".imageWrapper",
+    {
+      //   transform: "translate3d(0px, 0px, 0px) scale(1)",
+      // transform: "translate3d(100px, 20px, 0px) scale(0.83)",
+      transform: `translateX(0px)`,
+      // border: "3px solid red",
+    },
+    "-=1"
+  );
+  gsap.to(".product__info", {
+    padding: "0.8em 1em",
+    position: "relative",
+    display: "block",
+    zIndex: -5,
+    background: "#fff",
+    borderRadius: "10px",
+    transform: `translateX(0px)`,
+    duration: 1,
+    ease: "Power4.easeOut",
+  });
 };
 
 export const transitionToOpen = (wasOpen) => {

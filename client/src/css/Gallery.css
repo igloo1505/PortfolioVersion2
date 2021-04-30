@@ -164,9 +164,6 @@ h3 {
   filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
   padding: 15px; }
 
-.photo-main .currentCameraCardImageIsOpen {
-  transform: translate3d(-100px, -20px, 0px) scale(1.2); }
-
 .photo-album {
   padding: 0.7em 1em;
   border-radius: 0 0 6px 6px;
