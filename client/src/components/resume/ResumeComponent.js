@@ -1,5 +1,5 @@
 import React from "react";
-import "./Resume.css";
+import "../../css/Resume.css";
 import ContactSection from "./ContactSection";
 import AboutMeSection from "./AboutMeSection";
 import ProjectsSection from "./ProjectsSection";
