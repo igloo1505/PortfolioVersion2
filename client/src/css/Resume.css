@@ -127,6 +127,11 @@
   line-height: 1.5rem; }
 
 @media only screen and (max-width: 900px) {
+  .titleText {
+    text-align: center; }
+  .basicDetailsSection .name {
+    text-align: center;
+    padding-bottom: 15px; }
   .skillWrapper {
     grid-template-columns: 1fr; }
   .contactDetails ul {
@@ -134,6 +139,13 @@
   .contactDetails ul li {
     border-right: none !important;
     padding: 0.2rem; }
+  .singleProject * {
+    text-align: center; }
+  .singleProject .projectUrl {
+    font-size: 1.1rem; }
+  .singleProject .projectDescription {
+    line-height: 1.4rem;
+    font-size: 0.9rem; }
   .subtitleText {
     float: none !important;
     display: block;

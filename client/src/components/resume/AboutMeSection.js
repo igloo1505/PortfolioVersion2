@@ -7,8 +7,8 @@ const AboutMeSection = () => {
         About Me
       </div>
       <div className="aboutMeDescription">
-        I am a self-taught web developer that works most often with React and
-        Node but have a new found love for Swift. I have always had a strong
+        I am a self-taught developer that works most often with React and
+        Node.js but have a new found love for Swift. I have always had a strong
         drive to understand how things work underneath. I was able to teach
         myself how to rebuild an internal combustion engine in middle school,
         passed the ASE certified mechanic exam as soon as I turned 18, and
@@ -20,7 +20,7 @@ const AboutMeSection = () => {
       </div>
       <div className="signInInfo">
         All of my portfolio projects can use a default admin login of{" "}
-        <span>hireme@gmail.com</span>and a password of <span>Password123</span>
+        <span>hireme@gmail.com </span>and a password of <span>Password123</span>
       </div>
     </div>
   );

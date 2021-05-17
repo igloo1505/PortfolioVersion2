@@ -145,6 +145,13 @@
 
 
 @media only screen and (max-width: 900px){
+    .titleText{
+        text-align: center;
+    }
+    .basicDetailsSection .name{
+        text-align: center;
+        padding-bottom: 15px;
+    }
     .skillWrapper{
         grid-template-columns: 1fr;
     }
@@ -155,6 +162,19 @@
             padding: 0.2rem;
         }
     }
+    .singleProject {
+        *{
+            text-align: center;
+        }
+        .projectUrl {
+            font-size: 1.1rem;
+        }
+        .projectDescription{
+            line-height: 1.4rem;
+            font-size: 0.9rem;
+        }
+    }
+
     .subtitleText{
         float: none !important;
         display: block;
