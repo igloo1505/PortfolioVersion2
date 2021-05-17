@@ -20,14 +20,6 @@ export const CameraCardImageArray = [
   new CameraCardImage(cameraFive, 5),
 ];
 
-//  export const cameraImageArrayAsComponents = [
-//      ({style, key, isOpen, isInitialRender}) => <animated.img src={camera} alt="Camera Gear" className={isOpen && isInitialRender ? "currentCameraCardImage" : isOpen && !isInitialRender ?"currentCameraCardImage__Closed"} style={{...style}} key={key}/>,
-//      ({style, key, isOpen, isInitialRender}) => <animated.img src={cameraTwo} alt="Camera Gear" className={isOpen ? "currentCameraCardImage" : "currentCameraCardImage__Closed"} style={{...style}} key={key}/>,
-//      ({style, key, isOpen, isInitialRender}) => <animated.img src={cameraThree} alt="Camera Gear" className={isOpen ? "currentCameraCardImage" : "currentCameraCardImage__Closed"} style={{...style}} key={key}/>,
-//      ({style, key, isOpen, isInitialRender}) => <animated.img src={cameraFour} alt="Camera Gear" className={isOpen ? "currentCameraCardImage" : "currentCameraCardImage__Closed"} style={{...style}} key={key}/>,
-//      ({style, key, isOpen, isInitialRender}) => <animated.img src={cameraFive} alt="Camera Gear" className={isOpen ? "currentCameraCardImage" : "currentCameraCardImage__Closed"} style={{...style}} key={key}/>
-//  ]
-
 const styles = {
   //   transform: "translate3d(-100px, -20px, 0px) scale(1.2)",
   border: "4px solid red",
