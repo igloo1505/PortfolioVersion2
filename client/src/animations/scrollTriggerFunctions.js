@@ -152,7 +152,6 @@ export const animateOnScroll = () => {
       let Y = window.pageYOffset;
       let emHeight = 434;
       let scaleOnScroll = (emHeight - Y) / emHeight;
-      console.log("Running the motha fucking flip animation");
       gsap.to(".square-anim", {
         // rotation: self.progress * 850,
         // duration: 1,
