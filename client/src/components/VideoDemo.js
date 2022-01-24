@@ -37,7 +37,7 @@ const VideoDemo = () => {
 		<div
 			className="video-demo-container"
 			style={{
-				margin: "0 1rem",
+				// margin: "0 1rem",
 				borderRadius: "4px",
 				// width: "150%",
 				// border: "2px solid black",
@@ -47,6 +47,8 @@ const VideoDemo = () => {
 				id="recipeAppDemoVideo"
 				type="video/mp4"
 				ref={videoRef}
+				loop
+				muted
 				style={{
 					width: "100%",
 				}}
