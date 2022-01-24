@@ -1,11 +1,16 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { featuredTitleText } from "../UniversalData";
-import placeHolderImage from "../assets/FeaturedImage.jpg";
+import FeaturedImage from "../assets/FeaturedImage.png";
 // import VideoDemo from "./VideoDemo";
+import { isMobile } from "react-device-detect";
 const VideoDemo = React.lazy(() => import("./VideoDemo"));
 
 const FeaturedSection = () => {
 	const [shouldShowVideo, setShouldShowVideo] = useState(true);
+	useEffect(() => {
+		setShouldShowVideo(!isMobile);
+		console.log("isMobile: ", isMobile);
+	}, []);
 
 	return (
 		<div>
@@ -18,7 +23,7 @@ const FeaturedSection = () => {
 						fallback={
 							<img
 								className="right transition2"
-								src={placeHolderImage}
+								src={FeaturedImage}
 								alt="App Screenshot"
 							/>
 						}
@@ -28,7 +33,7 @@ const FeaturedSection = () => {
 				) : (
 					<img
 						className="right transition2"
-						src={placeHolderImage}
+						src={FeaturedImage}
 						alt="App Screenshot"
 					/>
 				)}
