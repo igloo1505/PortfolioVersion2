@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import demoVideo from "../assets/recipeAppDemo.mp4";
+// const demoVideo = React.lazy(() => import("../assets/recipeAppDemo.mp4"));
 // import Demo from "../assets/recipeAppDemo.mp4"
 
 // import demoVideo from "../../public/recipeAppDemo.mp4";
