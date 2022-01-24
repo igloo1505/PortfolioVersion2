@@ -161,6 +161,10 @@ img {
 	transform: translateX(-50%);
 }
 
+.featuredDescriptionText {
+	margin: 1rem 0rem;
+}
+
 .burgerWasClicked::before {
 	background-color: #000 !important;
 }
@@ -550,6 +554,9 @@ section {
 		width: 70%;
 		/* line-height: normal; */
 		/* line-height: 3.4rem; */
+	}
+	.featuredDescriptionText {
+		margin: 0rem;
 	}
 	.nav-container {
 		display: grid;
