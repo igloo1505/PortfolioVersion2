@@ -50,6 +50,7 @@ const VideoDemo = () => {
 				ref={videoRef}
 				loop
 				muted
+				playsinline
 				style={{
 					width: "100%",
 				}}
